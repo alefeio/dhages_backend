@@ -42,6 +42,11 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: false,
       },
+      galeria: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+      },
       ativo: {
         type: Sequelize.BOOLEAN,
         defaultValue: true,
