@@ -68,6 +68,25 @@ class ViagensController {
     return res.json(registros);
   }
 
+  async home(req, res) {
+    const data = Date();
+
+    const registros = await Viagens.findAll({
+      where: { ativo: true, saida: { [Op.gt]: data } },
+      order: ['saida'],
+      limit: 6,
+      include: [
+        {
+          model: File,
+          as: 'imagem',
+          attributes: ['id', 'path', 'url'],
+        },
+      ],
+    });
+
+    return res.json(registros);
+  }
+
   async realizadas(req, res) {
     const { page = 1 } = req.query;
 

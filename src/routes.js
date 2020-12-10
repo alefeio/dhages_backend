@@ -27,6 +27,7 @@ routes.get('/postsrelacionados/:id', BlogController.relacionados);
 routes.get('/blog/:id', BlogController.detail);
 
 routes.get('/viagens', ViagensController.index);
+routes.get('/viagenshome', ViagensController.home);
 routes.get('/viagensrealizadas', ViagensController.realizadas);
 routes.get('/viagensrelacionadas/:id', ViagensController.relacionados);
 routes.get('/viagens/:id', ViagensController.detail);
