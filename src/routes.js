@@ -40,7 +40,7 @@ routes.post('/reserva', ReservasController.store);
 routes.get('/ondeestamos', OndeestamosController.index);
 routes.get('/ondeestamos/:id', OndeestamosController.detail);
 
-routes.get('/', (req, res) => res.send('API rodando!'));
+routes.get('/', (req, res) => res.send('ok'));
 
 routes.get('/albuns', ViagensController.galeria);
 
